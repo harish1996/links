@@ -10976,7 +10976,7 @@ Library function or a wrapper around a function which can enable hashing for a f
 <div title="html5.svg" type="image/svg+xml">
 <pre>&lt;svg height=&quot;512pt&quot; viewBox=&quot;-27 0 512 512&quot; width=&quot;512pt&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;path d=&quot;m0 0 44.265625 461.5 186.480469 50.5 183.84375-50.5 44.265625-461.5zm0 0&quot; fill=&quot;#fd982c&quot;/&gt;&lt;path d=&quot;m230.746094 0v512l183.84375-50.5 44.265625-461.5zm0 0&quot; fill=&quot;#fa502e&quot;/&gt;&lt;path d=&quot;m367.171875 159.378906-195.859375-.003906 3.277344 35.828125h191.652344l-15.488282 200.191406-120.171875 34.953125-128.984375-40.117187v-81.183594h80.125v24.179687l48.875 15.101563 46.308594-15.113281 3.371094-59.941406h-177.4375l-20.03125-190.964844h284.363281zm0 0&quot; fill=&quot;#fff&quot;/&gt;&lt;g fill=&quot;#deecf1&quot;&gt;&lt;path d=&quot;m230.746094 82.308594h136.425781v77.070312h-136.425781zm0 0&quot;/&gt;&lt;path d=&quot;m280.277344 273.273438-3.371094 59.941406-46.160156 15.066406v82.019531l120.007812-34.90625 15.488282-200.191406h-135.496094v78.070313zm0 0&quot;/&gt;&lt;/g&gt;&lt;/svg&gt;</pre>
 </div>
-<div created="20220526204123562" modified="20220526204600254" tags="sqlite sql mandelbrot-set" title="Mandelbrot set using Sqlite" type="text/x-markdown">
+<div created="20220526204123562" modified="20220526204707193" tags="sqlite sql mandelbrot-set" title="Mandelbrot set using Sqlite" type="text/x-markdown">
 <pre>```
 -- Mandlebrot
 WITH RECURSIVE
@@ -10996,7 +10996,11 @@ WITH RECURSIVE
     FROM m2 GROUP BY cy
   )
 SELECT group_concat(rtrim(t),x'0a') as Mandelbrot FROM a;
-```</pre>
+```
+
+Excellent command this using recursives and a other stuff. 
+
+More could be found in https://sqlite.org/fiddle/</pre>
 </div>
 <div created="20200619203802199" modified="20200619204130463" tags="compile-time python metaclass" title="Metaclasses in Python" type="text/vnd.tiddlywiki">
 <pre>https://docs.python.org/3.5/reference/datamodel.html#metaclass-example
