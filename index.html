@@ -11098,9 +11098,8 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 <div created="20200109175020928" modified="20200109175020928" title="$:/view">
 <pre>pop</pre>
 </div>
-<div created="20221222061600073" modified="20221222061936080" tags="reference cpp unordered_map" title="Access or create a entry in map in C++ directly" type="text/x-markdown">
-<pre>```cpp
-#include &lt;iostream&gt;
+<div created="20221222061600073" modified="20221222062127764" tags="reference cpp unordered_map" title="Access or create a entry in map in C++ directly" type="text/vnd.tiddlywiki">
+<pre>`#include &lt;iostream&gt;
 #include &lt;unordered_map&gt;
 
 using namespace std;
@@ -11113,8 +11112,8 @@ int main()
 	int c = a[2];
 	c = 3;
 	cout&lt;&lt;a[1]&lt;&lt;endl&lt;&lt;a[2]&lt;&lt;endl;
-}
-```
+}`
+
 The above code works somehow. Previously i assumed this will error out in runtime when it doesnt find the index in the line `int &amp;b = a[1];`. But the documentation clearly states that it will create an element if it doesnt find one, regardless of where it is. 
 
 For god's sake, the operator is named create or access in the [documentation](https://en.cppreference.com/w/cpp/container/unordered_map/operator_at)</pre>
