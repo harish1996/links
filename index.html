@@ -437,6 +437,8 @@ Error message and password prompt
 
 <li>$:/view</li>
 
+<li>Access or create a entry in map in C++ directly</li>
+
 <li>Acronyms that stand for two different words with the same meaning</li>
 
 <li>adb</li>
@@ -10155,7 +10157,7 @@ Error message and password prompt
 <div created="20200111083414904" modified="20200111083414904" title="$:/state/tag-manager/web-dev">
 <pre>open</pre>
 </div>
-<div list="[[Reason why public key is obtainable from private key in RSA]]" title="$:/StoryList">
+<div list="[[Access or create a entry in map in C++ directly]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200109172615286" modified="20200111083517793" title="$:/temp/advancedsearch">
@@ -11095,6 +11097,27 @@ This plugin also requires the JSZip plugin ([[$:/plugins/tiddlywiki/jszip]]) to 
 </div>
 <div created="20200109175020928" modified="20200109175020928" title="$:/view">
 <pre>pop</pre>
+</div>
+<div created="20221222061600073" modified="20221222061936080" tags="reference cpp unordered_map" title="Access or create a entry in map in C++ directly" type="text/x-markdown">
+<pre>```cpp
+#include &lt;iostream&gt;
+#include &lt;unordered_map&gt;
+
+using namespace std;
+
+int main()
+{
+	unordered_map&lt;int,int&gt; a;
+	int&amp; b = a[1];
+	b = 5;
+	int c = a[2];
+	c = 3;
+	cout&lt;&lt;a[1]&lt;&lt;endl&lt;&lt;a[2]&lt;&lt;endl;
+}
+```
+The above code works somehow. Previously i assumed this will error out in runtime when it doesnt find the index in the line `int &amp;b = a[1];`. But the documentation clearly states that it will create an element if it doesnt find one, regardless of where it is. 
+
+For god's sake, the operator is named create or access in the [documentation](https://en.cppreference.com/w/cpp/container/unordered_map/operator_at)</pre>
 </div>
 <div created="20221215133944306" modified="20221215134026360" tags="english acronyms" title="Acronyms that stand for two different words with the same meaning" type="text/vnd.tiddlywiki">
 <pre>https://english.stackexchange.com/questions/97710/double-acronym-initialism-acronyms-and-initialisms-that-stand-for-two-things-si</pre>
