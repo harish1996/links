@@ -647,6 +647,8 @@ Error message and password prompt
 
 <li>Why do stock prices rise if the company performs well ?</li>
 
+<li>Why fread has two different arguments for size ?</li>
+
 <li>Why is a bad idea to loop over find's output</li>
 
 <li>Why neural network function is non-convex ?</li>
@@ -10173,7 +10175,7 @@ Error message and password prompt
 <div created="20200111083414904" modified="20200111083414904" title="$:/state/tag-manager/web-dev">
 <pre>open</pre>
 </div>
-<div list="[[How to comment in python for VSCode to recognize it ?]]" title="$:/StoryList">
+<div list="[[Why fread has two different arguments for size ?]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200109172615286" modified="20200111083517793" title="$:/temp/advancedsearch">
@@ -11520,6 +11522,13 @@ https://en.cppreference.com/w/cpp/language/parameter_pack</pre>
 </div>
 <div created="20210310114114111" modified="20210310114136148" tags="[[stock market, finance]]" title="Why do stock prices rise if the company performs well ?" type="text/vnd.tiddlywiki">
 <pre>https://money.stackexchange.com/a/1395/107518</pre>
+</div>
+<div created="20230201110937977" modified="20230201111556740" tags="cpp c++ c fread" title="Why fread has two different arguments for size ?" type="text/x-markdown">
+<pre>There are two arguments in `fread` called `size` and `count`. People usually assign 1 to one of these arguments. So why is there two arguments ?
+
+If the file is a binary file, and say it contains a list of structures with size of 77. And say the binary file we are reading is supposed to have 10 of those. But for some reason the last one in the list is corrupted and is cut midway. So the file now has 720 bytes instead of the 770. If we read using `fread` with size=77 and count=10, `fread` will read the 720 bytes and realize that the last element in the list is corrupted, and will return a value of 9, which will shows us that something has happened to the last element and the file is corrupted.
+
+Since `fread` doesnt assume that the file always contains the bytes we request, this is necessary.</pre>
 </div>
 <div created="20221110060433118" modified="20221110060453702" tags="find bash" title="Why is a bad idea to loop over find's output" type="text/vnd.tiddlywiki">
 <pre>https://unix.stackexchange.com/a/321753/244179</pre>
