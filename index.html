@@ -685,6 +685,8 @@ Error message and password prompt
 
 <li>What happens if i use multiple case in typeswitch statement and use the output ?</li>
 
+<li>What happens when new fails ?</li>
+
 <li>What happens when we static cast a derived class' object to the base class and call a virtual function ?</li>
 
 <li>What is the `typename` keyword for ?</li>
@@ -10224,7 +10226,7 @@ Error message and password prompt
 <div created="20200111083414904" modified="20200111083414904" title="$:/state/tag-manager/web-dev">
 <pre>open</pre>
 </div>
-<div list="[[Learn, build and explain regex expressions]]" title="$:/StoryList">
+<div list="[[What happens when new fails ?]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200109172615286" modified="20200111083517793" title="$:/temp/advancedsearch">
@@ -11640,6 +11642,14 @@ https://en.cppreference.com/w/cpp/language/parameter_pack</pre>
 </div>
 <div created="20221028101819603" modified="20221028101909351" tags="type-switch golang" title="What happens if i use multiple case in typeswitch statement and use the output ?" type="text/vnd.tiddlywiki">
 <pre>https://stackoverflow.com/a/40575079</pre>
+</div>
+<div created="20230405133817455" modified="20230405133929037" tags="memory c++ cpp dynamic-allocation" title="What happens when new fails ?" type="text/vnd.tiddlywiki">
+<pre>
+&lt;&lt;&lt;
+If initialization terminates by throwing an exception (e.g. from the constructor), if new-expression allocated any storage, it calls the appropriate deallocation function: operator delete for non-array type, operator delete[] for array type. The deallocation function is looked up in global scope if the new-expression used the ::new syntax, otherwise it is looked up in the scope of T, if T is a class type. If the failed allocation function was usual (non-placement), lookup for the deallocation function follows the rules described in delete-expression. For a failed placement new, all parameter types, except the first, of the matching deallocation function must be identical to the parameters of the placement new. The call to the deallocation function is made the value obtained earlier from the allocation function passed as the first argument, alignment passed as the optional alignment argument (since C++17), and placement-params, if any, passed as the additional placement arguments. If no deallocation function is found, memory is not deallocated. 
+&lt;&lt;&lt;
+
+https://en.cppreference.com/w/cpp/language/new</pre>
 </div>
 <div created="20221010090928587" modified="20221010091016221" tags="OOP cpp inheritance" title="What happens when we static cast a derived class' object to the base class and call a virtual function ?" type="text/vnd.tiddlywiki">
 <pre>https://stackoverflow.com/a/17327774</pre>
