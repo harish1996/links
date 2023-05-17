@@ -525,6 +525,8 @@ Error message and password prompt
 
 <li>Expose ports in running container</li>
 
+<li>Find last common commit between two branches</li>
+
 <li>Find the line number of source from stacktrace address</li>
 
 <li>Finding out the linux distro</li>
@@ -10244,7 +10246,7 @@ Error message and password prompt
 <div created="20200111083414904" modified="20200111083414904" title="$:/state/tag-manager/web-dev">
 <pre>open</pre>
 </div>
-<div list="[[A very detailed history of graphics APIs]]" title="$:/StoryList">
+<div list="[[Find last common commit between two branches]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20200109172615286" modified="20200111083517793" title="$:/temp/advancedsearch">
@@ -11336,6 +11338,15 @@ https://stackoverflow.com/a/12953129</pre>
 </div>
 <div created="20230328151132752" modified="20230328151502549" tags="docker" title="Expose ports in running container" type="text/vnd.tiddlywiki">
 <pre>https://stackoverflow.com/a/26622041</pre>
+</div>
+<div created="20230517085131666" modified="20230517085410635" tags="git" title="Find last common commit between two branches" type="text/vnd.tiddlywiki">
+<pre>https://stackoverflow.com/a/1549155
+
+This can be useful when a remote branch has diverged and the local branch has to point to the remote branch without triggering a rebase/merge. 
+
+`git merge-base HEAD master` will find the diverge point of the current branch with master ( a reliable branch which wont change ). Then `git reset --hard &lt;commit sha from the previous command&gt;`. 
+
+After doing this, if we pull the upstream branch it will update the local branch without any complaints.</pre>
 </div>
 <div created="20230331095940695" modified="20230331100023897" tags="cpp c" title="Find the line number of source from stacktrace address" type="text/vnd.tiddlywiki">
 <pre>https://www.qnx.com/developers/docs/6.4.0/neutrino/utilities/a/addr2line.html</pre>
